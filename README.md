@@ -1,5 +1,5 @@
 # Regular_Expression
-A regular expression that returns all the list items that contain the word Delhi. The list is stored in the data variable.
+A regular expression that returns all the list items that contain Delhi and an email address.
 
 data=[
     "mr Jim Cloudy, Texas, 01091231, 1 dog 1 cat, jim.cloudy@example.com", 
@@ -11,8 +11,6 @@ data=[
     "mrs Alma Stills Delhi 01231981 1 dog",
     "mr Sen Kumar Delhi 3456 ants"
 ]
-Your code solution output the following:
+Your solution should output the following:
 
-['mrs Anna Cloudy, Delhi, 2dogs 1fish bathlover@example.com',
- 'mrs Alma Stills Delhi 01231981 1 dog',
- 'mr Sen Kumar Delhi 3456 ants']
+['mrs Anna Cloudy, Delhi, 2dogs 1fish bathlover@example.com']
