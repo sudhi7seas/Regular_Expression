@@ -1,5 +1,4 @@
-# Regular_Expression
-A regular expression that returns all the list items that contain Delhi and an email address.
+Write a regular expression that returns all the list items that contain Delhi and a phone number. Phone numbers either start with a 0 or with a +.
 
 data=[
     "mr Jim Cloudy, Texas, 01091231, 1 dog 1 cat, jim.cloudy@example.com", 
@@ -13,4 +12,4 @@ data=[
 ]
 Your solution should output the following:
 
-['mrs Anna Cloudy, Delhi, 2dogs 1fish bathlover@example.com']
+['mrs Alma Stills Delhi 01231981 1 dog']
