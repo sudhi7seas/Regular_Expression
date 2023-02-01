@@ -1,4 +1,4 @@
-#Write a regular expression that returns all the list items that contain Delhi and an email address.
+#Write a regular expression that returns all the list items that contain Delhi and a phone number. Phone numbers either start with a 0 or with a +.
 
 data=[
     "mr Jim Cloudy, Texas, 01091231, 1 dog 1 cat, jim.cloudy@example.com", 
@@ -10,22 +10,19 @@ data=[
     "mrs Alma Stills Delhi 01231981 1 dog",
     "mr Sen Kumar Delhi 3456 ants"
 ]
+
 #Your solution should output the following:
 
-#['mrs Anna Cloudy, Delhi, 2dogs 1fish bathlover@example.com']
+#['mrs Alma Stills Delhi 01231981 1 dog']
 
 import re
-
-pattern = re.compile(".*Delhi.*[^ ]+@[^ ]+\.[a-z]+", re.IGNORECASE)
-
+ 
+pattern = re.compile(".*Delhi.*[0|+][0-9]{4,50}", re.IGNORECASE)
 matches = [match for match in data if pattern.findall(match)]
-
 print(matches)
 
-# .*Delhi.* searches for Delhi anywhere in the line.
+#.*Delhi.* searches for Delhi anywhere in the line.
 
-# [^ ]+ searches for one or more characters other than white space.
+# [0|+] searches for a 0 or a +
 
-# @[^ ]+ searches for an @ symbol followed by any number of characters other than space.
-
-# \.[a-z]+ searches for a dot followed by any number of letters.
+# [0-9]{4,50} searches if there is a number with a length from 4 to 50 digits. This assumes phone numbers are not shorter than 4 digits and not longer than 50.
